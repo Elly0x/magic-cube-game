@@ -1,22 +1,17 @@
 import React from 'react';
 
-interface ControlsProps {
+type Props = {
   onShuffle: () => void;
   onSolve: () => void;
-  onRotate: (move: string) => void;
-}
+  onMove: (move: string) => void;
+};
 
-const Controls: React.FC<ControlsProps> = ({ onShuffle, onSolve, onRotate }) => {
+const Controls: React.FC<Props> = ({ onShuffle, onSolve, onMove }) => {
   return (
     <div className="controls">
       <button onClick={onShuffle}>Shuffle</button>
       <button onClick={onSolve}>Solve</button>
-      <div className="rotate-group">
-        <button onClick={() => onRotate('U')}>U</button>
-        <button onClick={() => onRotate("U'")}>U'</button>
-        <button onClick={() => onRotate('R')}>R</button>
-        <button onClick={() => onRotate("R'")}>R'</button>
-      </div>
+      <button onClick={() => onMove('R')}>Rotate R</button>
     </div>
   );
 };
