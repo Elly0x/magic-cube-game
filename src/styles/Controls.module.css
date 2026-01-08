@@ -1,11 +1,22 @@
 .controls {
+  margin-top: 30px;
   display: flex;
-  gap: 10px;
-  align-items: center;
   justify-content: center;
-  margin: 10px 0;
+  gap: 15px;
 }
 
 .controls button {
-  min-width: 100px;
+  font-size: 14px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #111;
+  border: 1px solid #00ffcc;
+  color: #00ffcc;
+  transition: transform 0.2s ease;
+}
+
+.controls button:hover {
+  transform: scale(1.1);
+  background: #00ffcc;
+  color: #111;
 }
